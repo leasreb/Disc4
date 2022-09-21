@@ -1,5 +1,5 @@
 # import the random module
-import random
+from random import *
 
 # create the class Dice
 class Dice:
@@ -20,7 +20,10 @@ class Dice:
     # it randomly picks a value from 1 to the number of sides this dice object has
     # it adds that value to the end of the list that tracks all the rolls
     # it returns the value
-
+    def roll(self):
+        roll = randint(1, self.sides)
+        self.roll_history.append(roll)
+        return roll
 
     # BONUS
     # create the print_count_for_num method
