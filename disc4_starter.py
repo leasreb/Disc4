@@ -13,7 +13,8 @@ class Dice:
 
     # create the __str__ method
     # it returns "Last roll: value" where value is the last value in the list that tracks the rolls
-    
+    def __str__(self):
+        return "Last roll: " + str(self.roll_history[-1])
 
     # create the roll method
     # it randomly picks a value from 1 to the number of sides this dice object has
